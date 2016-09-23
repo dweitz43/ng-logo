@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
-import { COLORS, Color } from './color';
+import { COLORS, Color } from './shared/';
 import { DragulaService } from 'ng2-dragula/ng2-dragula';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css', '../assets/css/dragula.min.css'],
+  styleUrls: ['./app.component.css'],
   viewProviders: [ DragulaService ]
 })
 export class AppComponent {
