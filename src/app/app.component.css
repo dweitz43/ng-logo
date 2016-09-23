@@ -1,0 +1,141 @@
+html, body{
+  height: 100%;
+  background: #F4FAFA;
+  font-family: Arial, Helvetica, sans-serif;
+}
+button.active{
+  background: #fff;
+  color: #009688;
+}
+button.active:hover{
+  color: #fff;
+}
+.fill{
+  flex: 1 1 auto;
+}
+footer{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  flex: 0 0 60px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+span {
+  white-space: nowrap;
+}
+
+a {
+  padding-left: 0.5em;
+}
+
+md-toolbar span {
+  color: white;
+}
+
+
+/** remove when fixed in angular2-material **/
+/** The overlay-container is an invisible element which contains all individual overlays. */
+.md-overlay-container {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; }
+
+/** A single overlay pane. */
+.md-overlay-pane {
+  position: absolute;
+  pointer-events: auto;
+  box-sizing: border-box;
+  z-index: 1000; }
+
+
+
+
+/*styles for home content only*/
+.card-container{
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+.sample-content{
+  flex: 1;
+}
+.card-container md-card{
+  margin: 5px;
+}
+
+.palette-container {
+  max-height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: scroll;
+}
+
+.palette-container button {
+  margin: 0.5em;
+}
+
+[md-fab] {
+  margin: 0.5em;
+  background-color: #000000;
+}
+
+md-card-title {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  position: absolute;
+  bottom: 110px;
+  -moz-padding-start: 0;
+  -webkit-padding-start: 0;
+  padding-left: 0;
+}
+
+li button {
+  cursor: -webkit-grab;
+  width: 2em;
+  height: 2em;
+}
+
+li {
+  list-style: none;
+}
+
+.fade-shield {
+  opacity: 0.1;
+}
+
+@media screen and (max-width: 865px) {
+  ul {
+    bottom: 220px;
+  }
+
+  svg {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 866px) and  (max-width: 1175px) {
+  ul {
+    bottom: 150px;
+  }
+}
+
+@media screen and (min-width: 568px) and (max-width: 1175px) {
+  svg {
+    width: 50%;
+  }
+}
+
+
