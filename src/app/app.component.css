@@ -1,26 +1,15 @@
 html, body{
   height: 100%;
-  background: #F4FAFA;
-  font-family: Arial, Helvetica, sans-serif;
-}
-button.active{
-  background: #fff;
-  color: #009688;
-}
-button.active:hover{
-  color: #fff;
 }
 .fill{
   flex: 1 1 auto;
 }
 footer{
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   flex: 0 0 60px;
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
 }
 
 span {
@@ -34,21 +23,3 @@ a {
 md-toolbar span {
   color: white;
 }
-
-
-/** remove when fixed in angular2-material **/
-/** The overlay-container is an invisible element which contains all individual overlays. */
-.md-overlay-container {
-  position: absolute;
-  pointer-events: none;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%; }
-
-/** A single overlay pane. */
-.md-overlay-pane {
-  position: absolute;
-  pointer-events: auto;
-  box-sizing: border-box;
-  z-index: 1000; }

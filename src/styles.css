@@ -1,1 +1,17 @@
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
 @import "assets/css/dragula.min.css";
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+md-toolbar-row {
+  justify-content: space-between;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

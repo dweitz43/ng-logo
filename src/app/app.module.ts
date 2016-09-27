@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MdModule } from './shared/';
+import { MaterialModule } from '@angular/material';
 import { DragulaModule } from 'ng2-dragula/ng2-dragula';
 
 import { AppComponent } from './app.component';
@@ -13,7 +13,7 @@ import { LogoComponent } from './logo/logo.component';
   ],
   imports: [
     BrowserModule,
-    MdModule.forRoot(),
+    MaterialModule.forRoot(),
     DragulaModule
   ],
   providers: [],
