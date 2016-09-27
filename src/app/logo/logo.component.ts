@@ -5,7 +5,7 @@ import { COLORS, Color } from '../shared/';
 @Component({
   selector: 'app-logo',
   templateUrl: './logo.component.html',
-  styleUrls: ['./logo.component.css'],
+  styleUrls: ['./logo.component.scss'],
   viewProviders: [ DragulaService ]
 })
 export class LogoComponent {
