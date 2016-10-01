@@ -17,3 +17,8 @@ import 'core-js/es6/reflect';
 
 import 'core-js/es7/reflect';
 import 'zone.js/dist/zone';
+
+// Hammer.js
+// We need to import this library in order for Material to work
+// Material needs this for md-tooltips
+import 'hammerjs/hammer.js';

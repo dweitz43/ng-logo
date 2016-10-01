@@ -17,10 +17,9 @@ export class LogoComponent {
   selectedColor: Color;
   buttonClicked: boolean;
   colors: Color[];
-  mousedown = new EventEmitter();
 
-  @HostListener('mousedown', ['$event'])
-  onMouseDown(event) { event.preventDefault(); }
+  @HostListener('touchmove', ['$event'])
+  onDrag(event) { console.log(event); event.preventDefault(); }
 
   constructor( private dragulaService: DragulaService) {
     this.leftColor = '#F44336';
