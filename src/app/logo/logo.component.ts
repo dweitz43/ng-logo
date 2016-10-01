@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, HostListener } from '@angular/core';
 import { DragulaService } from 'ng2-dragula/ng2-dragula';
 import { COLORS, Color } from '../shared/';
 
@@ -17,6 +17,10 @@ export class LogoComponent {
   selectedColor: Color;
   buttonClicked: boolean;
   colors: Color[];
+  mousedown = new EventEmitter();
+
+  @HostListener('mousedown', ['$event'])
+  onMouseDown(event) { event.preventDefault(); }
 
   constructor( private dragulaService: DragulaService) {
     this.leftColor = '#F44336';
