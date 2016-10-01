@@ -12,8 +12,8 @@ export class ColorSelectorComponent {
   colors: Color[];
   @Input() buttonClicked: boolean;
 
-  // @HostListener('touchmove', ['$event'])
-  // onTouchMove(event) { console.log(event); event.preventDefault(); }
+  @HostListener('mousewheel', ['$event'])
+  onTouchMove(event) { console.log(event); event.preventDefault(); }
 
   constructor() {
     this.colors = COLORS;
