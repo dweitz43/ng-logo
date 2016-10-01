@@ -1,0 +1,46 @@
+.palette-container {
+  max-height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: scroll;
+}
+
+[md-raised-button] {
+  margin: 0.5em;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  position: absolute;
+  bottom: 110px;
+  -moz-padding-start: 0;
+  -webkit-padding-start: 0;
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+[md-fab] {
+  margin: 0.5em 0.5em 1.5em 0.5em;
+  background-color: #000000;
+  cursor: -webkit-grab;
+  width: 2em;
+  height: 2em;
+}
+
+@media screen and (max-width: 865px) {
+  ul {
+    bottom: 220px;
+  }
+}
+
+@media screen and (min-width: 866px) and  (max-width: 1175px) {
+  ul {
+    bottom: 150px;
+  }
+}

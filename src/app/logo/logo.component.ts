@@ -1,6 +1,5 @@
-import { Component, EventEmitter, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { DragulaService } from 'ng2-dragula/ng2-dragula';
-import { COLORS, Color } from '../shared/';
 
 @Component({
   selector: 'app-logo',
@@ -14,18 +13,12 @@ export class LogoComponent {
   rightColor: string;
   textColor: string;
   colorDragging: boolean;
-  selectedColor: Color;
   buttonClicked: boolean;
-  colors: Color[];
-
-  @HostListener('touchmove', ['$event'])
-  onDrag(event) { console.log(event); event.preventDefault(); }
 
   constructor( private dragulaService: DragulaService) {
     this.leftColor = '#F44336';
     this.rightColor = '#D32F2F';
     this.textColor = '#FFFFFF';
-    this.colors = COLORS;
 
     dragulaService.setOptions('shield', {
       moves: function (el, source, handle, sibling) {
@@ -68,15 +61,6 @@ export class LogoComponent {
       this.buttonClicked = false;
       this.onDrop(value.slice(1));
     });
-  }
-
-  selectColor(color: Color) {
-    if (this.selectedColor && color.name === this.selectedColor.name) {
-      this.buttonClicked = !this.buttonClicked;
-    } else {
-      this.buttonClicked = true;
-    }
-    this.selectedColor = color;
   }
 
   private onOver(args) {

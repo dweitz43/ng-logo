@@ -5,11 +5,13 @@ import { DragulaModule } from 'ng2-dragula/ng2-dragula';
 
 import { AppComponent } from './app.component';
 import { LogoComponent } from './logo/logo.component';
+import { ColorSelectorComponent } from './logo/color-selector/color-selector.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LogoComponent
+    LogoComponent,
+    ColorSelectorComponent
   ],
   imports: [
     BrowserModule,
