@@ -1,4 +1,4 @@
-import {Component, HostListener, Input} from '@angular/core';
+import {Component, Input, HostListener} from '@angular/core';
 import { COLORS, Color } from '../../shared/';
 
 @Component({
@@ -12,11 +12,17 @@ export class ColorSelectorComponent {
   colors: Color[];
   @Input() buttonClicked: boolean;
 
-  @HostListener('mousewheel', ['$event'])
-  onTouchMove(event) { console.log(event); event.preventDefault(); }
+  // @HostListener('window:touchmove', ['$event'])
+  // onTouchMove(ev) {
+  //   console.log(ev);
+  // }
 
   constructor() {
     this.colors = COLORS;
+  }
+
+  ngOnInit() {
+    window.addEventListener('touchmove', function() {});
   }
 
   selectColor(color: Color) {
