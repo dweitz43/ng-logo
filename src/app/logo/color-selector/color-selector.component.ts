@@ -12,17 +12,11 @@ export class ColorSelectorComponent {
   colors: Color[];
   @Input() buttonClicked: boolean;
 
-  // @HostListener('window:touchmove', ['$event'])
-  // onTouchMove(ev) {
-  //   console.log(ev);
-  // }
+  @HostListener('window:touchmove', ['$event'])
+  onTouchMove() {}
 
   constructor() {
     this.colors = COLORS;
-  }
-
-  ngOnInit() {
-    window.addEventListener('touchmove', function() {});
   }
 
   selectColor(color: Color) {
