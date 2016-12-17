@@ -5,7 +5,9 @@
   "angular-cli": {},
   "scripts": {
     "start": "ng serve",
+    "start:hmr": "ng serve --hmr -e=hmr",
     "start:aot": "ng serve --aot",
+    "start:hmr:aot": "ng serve --aot --hmr -e=hmr",
     "build": "ng build",
     "build:prod": "ng build --prod",
     "build:prod:aot": "ng build --prod --aot",
@@ -37,10 +39,11 @@
     "zone.js": "^0.7.1"
   },
   "devDependencies": {
+    "@angularclass/hmr": "^1.2.2",
     "@types/hammerjs": "^2.0.33",
     "@types/jasmine": "^2.2.30",
     "@types/node": "^6.0.42",
-    "angular-cli": "1.0.0-beta.21",
+    "angular-cli": "1.0.0-beta.23",
     "codelyzer": "1.0.0-beta.4",
     "jasmine-core": "2.5.2",
     "jasmine-spec-reporter": "2.7.0",
