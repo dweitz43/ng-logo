@@ -1,7 +1,7 @@
 <md-card-content class="palette-container">
 
-  <div *ngFor="let color of colors">
-    <button md-raised-button [ngStyle]="{'background-color': color.primary, 'color': color.text}" (click)="selectColor(color)">{{color.name}}</button>
+  <div *ngFor="let color of colors" fxLayout="row" fxFlex>
+    <button md-raised-button fxFlex [ngStyle]="{'background-color': color.primary, 'color': color.text}" (click)="selectColor(color)">{{color.name}}</button>
     <ul [dragula]="'shield'" id="list" *ngIf="selectedColor === color && buttonClicked">
       <li [id]="color.light">
         <button md-fab class="color" [ngStyle]="{'background-color': color.light}"></button>
